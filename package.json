@@ -1,5 +1,5 @@
 {
-  "name": "selfish_yet_optimal_routing",
+  "name": "demo_selfish_yet_optimal_routing",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Takanori HARA <hara.takanori.hm8@is.naist.jp>",
@@ -11,10 +11,12 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "d3": "^5.9.2",
+    "gh-pages": "^2.0.1",
     "vue": "^2.5.2",
     "vuetify": "^1.5.14"
   },
