@@ -10,10 +10,10 @@
     <v-container grid-list-md text-xs-center>
       <v-layout>
         <v-flex xs12 md4>
-          <v-text-field v-model="flow_link1" label="flow of link1, e.g., [0,1]" type="number" step="0.01" min="0" max="1" @click="getFlowLink2" @keydown="getFlowLink2" value="getFlowLink1() | round"></v-text-field>
+          <v-text-field v-model="flow_link1" label="flow of link1, i.e., [0,1]" type="number" step="0.01" :class="{invalid:flow_link1 <= 1 || flow_link1 >= 0}" min="0" max="1" @click="getFlowLink2" @keydown="getFlowLink2" value="getFlowLink1() | round"></v-text-field>
         </v-flex>
         <v-flex xs12 md4>
-          <v-text-field v-model="flow_link2" label="flow of link2, e.g., [0,1]" type="number" step="0.01" min="0" max="1" @click="getFlowLink1" @keydown="getFlowLink1" value="getFlowLink2() | round"></v-text-field>
+          <v-text-field v-model="flow_link2" label="flow of link2, i.e., [0,1]" type="number" step="0.01" :class="{invalid:flow_link2 <= 1 || flow_link2 >= 0}" min="0" max="1" @click="getFlowLink1" @keydown="getFlowLink1" value="getFlowLink2() | round"></v-text-field>
         </v-flex>
         <v-flex xs12 md4>
           <v-btn depressed large @click="clear">Clear</v-btn>
